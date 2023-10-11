@@ -1,24 +1,29 @@
 import { Button, Heading, Stack, Text, VStack } from '@chakra-ui/react';
 import React, { useState } from 'react'
+import Video1 from "../Assets/1.mp4"
+import Video2 from "../Assets/4.mp4"
+import Video3 from "../Assets/5.mp4"
+import Video4 from "../Assets/6.mp4"
 
 const Videos = () => {
     const VideoArr =[
-        'https://youtu.be/IUN664s7N-c',
-        'https://www.pexels.com/video/drone-view-of-big-waves-rushing-to-the-shore-3571264/',
-        'https://player.vimeo.com/external/510850877.hd.mp4?s=d5e9ed9ea40ba755e28512cce6c1ad00d92506f7&profile_id=174',
-        '',
+        Video1,
+        Video2,
+        Video3,
+        Video4,
     ];
 
     const [VideosSrc, setVideoSrc] = useState(VideoArr[0])
   return <Stack direction={["column","row"]} h={"100vh"}>
     <VStack w={'full'}>
-        <video
+        <video 
         controls
         controlsList='nodownload'
         style={{
             width: '100%',
+            height: '100%'
         }}
-        src={{VideosSrc}}>
+        src={VideosSrc}>
 
         </video>
         <VStack alignItems={"flex-start"} p={"8"} w={"full"} overflowY={"autp"}>
